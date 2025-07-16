@@ -26,11 +26,8 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="bg-gradient-primary p-2 rounded-lg shadow-glow">
-              <Dumbbell className="h-6 w-6 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              FitTracker Pro
+            <span className="text-xl font-bold text-primary">
+              RiwiFit
             </span>
           </div>
 

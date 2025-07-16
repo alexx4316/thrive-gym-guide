@@ -70,12 +70,6 @@ export default {
 				focus: 'hsl(var(--focus))',
 				recovery: 'hsl(var(--recovery))'
 			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-energy': 'var(--gradient-energy)',
-				'gradient-strength': 'var(--gradient-strength)',
-				'gradient-wellness': 'var(--gradient-wellness)'
-			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
 				'intense': 'var(--shadow-intense)',
