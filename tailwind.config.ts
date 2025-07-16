@@ -61,7 +61,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				/* Custom gym colors */
+				energy: 'hsl(var(--energy))',
+				power: 'hsl(var(--power))',
+				strength: 'hsl(var(--strength))',
+				endurance: 'hsl(var(--endurance))',
+				focus: 'hsl(var(--focus))',
+				recovery: 'hsl(var(--recovery))'
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-energy': 'var(--gradient-energy)',
+				'gradient-strength': 'var(--gradient-strength)',
+				'gradient-wellness': 'var(--gradient-wellness)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'intense': 'var(--shadow-intense)',
+				'soft': 'var(--shadow-soft)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
