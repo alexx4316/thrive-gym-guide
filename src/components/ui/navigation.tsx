@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { MessageCircle, Calendar, Home, Compass, User, Dumbbell } from "lucide-react";
 import { Button } from "./button";
 import { Badge } from "./badge";
 import { cn } from "@/lib/utils";
+import { Chat } from "@/components/Chat";
 
 const getCurrentDate = () => {
   const now = new Date();
@@ -16,6 +18,8 @@ const getCurrentDate = () => {
 };
 
 export function Navigation() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   return (
     <nav className="bg-card border-b border-border/50 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4">
@@ -95,7 +99,8 @@ export function Navigation() {
             <Button 
               variant="outline" 
               size="sm" 
-              className="relative bg-gradient-energy border-0 text-white hover:shadow-intense transition-all duration-200"
+              className="relative"
+              onClick={() => setIsChatOpen(true)}
             >
               <MessageCircle className="h-4 w-4" />
               <span className="hidden sm:inline ml-2">Chat</span>
@@ -109,6 +114,8 @@ export function Navigation() {
           </div>
         </div>
       </div>
+      
+      <Chat isOpen={isChatOpen} onClose={() => setIsChatOpen(false)} />
     </nav>
   );
 }
