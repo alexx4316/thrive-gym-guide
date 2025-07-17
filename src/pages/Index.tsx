@@ -70,14 +70,14 @@ const quickActions = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen" style={{background: 'linear-gradient(135deg, #f8fffe 0%, #e8f5f3 100%)'}}>
       <div className="max-w-7xl mx-auto p-6 space-y-8">
         {/* Welcome Section */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             ¡Bienvenido de vuelta!
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl max-w-2xl mx-auto" style={{color: '#025951'}}>
             Continúa tu viaje fitness y alcanza tus metas con nuestro sistema completo de entrenamiento
           </p>
         </div>
@@ -92,8 +92,8 @@ const Index = () => {
                   <div className={`${stat.bgColor} p-2 rounded-lg w-fit mx-auto`}>
                     <IconComponent className={`h-5 w-5 ${stat.color}`} />
                   </div>
-                  <div className="text-xl font-bold">{stat.value}</div>
-                  <div className="text-xs text-muted-foreground">{stat.label}</div>
+                  <div className="text-xl font-bold" style={{color: '#034155'}}>{stat.value}</div>
+                  <div className="text-xs" style={{color: '#02735E'}}>{stat.label}</div>
                 </CardContent>
               </Card>
             );
@@ -109,7 +109,7 @@ const Index = () => {
             const IconComponent = action.icon;
             return (
               <Link key={index} to={action.link}>
-                <Card className={`${action.gradient} border-0 text-white hover:shadow-intense transition-all duration-200 cursor-pointer group`}>
+                <Card className={`${action.gradient} border-5 text-white hover:shadow-intense transition-all duration-200 cursor-pointer group`}>
                   <CardHeader className="pb-4">
                     <div className="flex items-center space-x-3">
                       <div className="bg-white/20 p-3 rounded-lg group-hover:scale-110 transition-transform duration-200">
@@ -151,16 +151,16 @@ const Index = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div className="space-y-2">
-                <h4 className="font-medium">Lo que trabajarás:</h4>
-                <ul className="space-y-1 text-muted-foreground">
+                <h4 className="font-medium" style={{color: '#034155'}}>Lo que trabajarás:</h4>
+                <ul className="space-y-1" style={{color: '#02735E'}}>
                   <li>• Resistencia cardiovascular</li>
                   <li>• Fuerza funcional</li>
                   <li>• Quema de grasa</li>
                 </ul>
               </div>
               <div className="space-y-2">
-                <h4 className="font-medium">Beneficios:</h4>
-                <ul className="space-y-1 text-muted-foreground">
+                <h4 className="font-medium" style={{color: '#034155'}}>Beneficios:</h4>
+                <ul className="space-y-1" style={{color: '#02735E'}}>
                   <li>• Quemar hasta 350 calorías</li>
                   <li>• Efecto afterburn 6+ horas</li>
                   <li>• Mejorar tu VO2 max</li>

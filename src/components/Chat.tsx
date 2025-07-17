@@ -63,7 +63,7 @@ export function Chat({ isOpen, onClose }: ChatProps) {
 
   return (
     <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-card border border-border rounded-lg shadow-soft w-full max-w-md h-[500px] flex flex-col">
+      <div className="bg-card border border-border rounded-lg shadow-soft w-full max-w-md h-[500px] flex flex-col mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-border">
           <div className="flex items-center gap-2">

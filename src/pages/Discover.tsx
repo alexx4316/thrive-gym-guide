@@ -90,14 +90,14 @@ const exerciseCategories = [
 
 export default function Discover() {
   return (
-    <div className="min-h-screen bg-background p-6">
+    <div className="min-h-screen p-6" style={{background: 'linear-gradient(135deg, #f8fffe 0%, #e8f5f3 100%)'}}>
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
           <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             Descubrir
           </h1>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-lg" style={{color: '#025951'}}>
             Encuentra entrenadores expertos y ejercicios personalizados
           </p>
         </div>
@@ -130,13 +130,13 @@ export default function Discover() {
                 </CardHeader>
                 
                 <CardContent className="space-y-4">
-                  <p className="text-sm text-muted-foreground text-center">
+                  <p className="text-sm text-gray-600 text-center">
                     {trainer.description}
                   </p>
                   
                   <div className="space-y-2">
                     <Link to={`/trainer/${trainer.id}`}>
-                      <Button className="w-full bg-gradient-primary border-0 hover:shadow-glow">
+                      <Button className="w-full border-0 text-white hover:shadow-glow hover:opacity-90 transition-all duration-300" style={{background: 'linear-gradient(135deg, #02735E 0%, #0CF25D 100%)'}}>
                         Ver Entrenador
                       </Button>
                     </Link>
@@ -166,11 +166,11 @@ export default function Discover() {
                       </div>
                       
                       <div>
-                        <h3 className="font-bold text-lg">{category.name}</h3>
-                        <p className="text-sm text-muted-foreground">
+                        <h3 className="font-bold text-lg" style={{color: '#034155'}}>{category.name}</h3>
+                        <p className="text-sm" style={{color: '#02735E'}}>
                           {category.exercises} ejercicios
                         </p>
-                        <p className="text-xs text-muted-foreground mt-1">
+                        <p className="text-xs mt-1" style={{color: '#025951'}}>
                           {category.description}
                         </p>
                       </div>
@@ -198,14 +198,14 @@ export default function Discover() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
+                <ul className="space-y-2 text-sm text-white">
                   <li>✅ Plan alimentario semanal personalizado</li>
                   <li>✅ Chat con IA nutricional</li>
                   <li>✅ Sugerencias basadas en tus alimentos</li>
                   <li>✅ Recetas detalladas paso a paso</li>
                 </ul>
                 <Link to="/recipes/premium">
-                  <Button className="w-full bg-white text-energy hover:bg-white/90">
+                  <Button className="w-full text-green-800 hover:bg-gray-100" style={{backgroundColor: 'white'}}>
                     Acceder al Plan Premium
                   </Button>
                 </Link>
@@ -217,14 +217,14 @@ export default function Discover() {
                 <CardTitle>Plan Gratuito</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-2 text-sm" style={{color: '#034155'}}>
                   <li>✅ Recetas básicas predeterminadas</li>
                   <li>✅ Tips nutricionales generales</li>
                   <li>❌ Chat con IA (Premium)</li>
                   <li>❌ Planes personalizados (Premium)</li>
                 </ul>
                 <Link to="/recipes/free">
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full border-green-600 text-green-700 hover:bg-green-50">
                     Ver Recetas Gratuitas
                   </Button>
                 </Link>

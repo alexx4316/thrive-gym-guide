@@ -52,16 +52,20 @@ export default function Profile() {
   const completedThisWeek = weeklyActivities.filter(activity => activity.completed).length;
   const totalCaloriesBurned = 2450; // Calculated from weekly activities
   const totalWorkoutTime = 180; // Minutes this week
+  
+  // Obtener datos del usuario autenticado
+  const userName = localStorage.getItem("userName") || userStats.name;
+  const userEmail = localStorage.getItem("userEmail") || "";
 
   return (
-    <div className="min-h-screen bg-background p-6">
+    <div className="min-h-screen p-6" style={{background: 'linear-gradient(135deg, #f8fffe 0%, #e8f5f3 100%)'}}>
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
           <h1 className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">
             Mi Perfil
           </h1>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-lg" style={{color: '#025951'}}>
             Seguimiento de tu progreso y estadísticas
           </p>
         </div>
@@ -71,11 +75,15 @@ export default function Profile() {
           {/* User Info */}
           <Card className="bg-gradient-strength border-0 text-white">
             <CardHeader className="text-center">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <User className="h-10 w-10" />
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=80&h=80&fit=crop&crop=face&auto=format" 
+                  alt="Foto de perfil" 
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
-              <CardTitle className="text-xl">{userStats.name}</CardTitle>
-              <p className="text-white/80">Miembro desde {userStats.joinDate}</p>
+              <CardTitle className="text-xl" style={{color: '#034155'}}>{userName}</CardTitle>
+              <p style={{color: '#025951'}}>Miembro desde {userStats.joinDate}</p>
             </CardHeader>
             
             <CardContent className="space-y-4">
@@ -228,8 +236,9 @@ export default function Profile() {
                   className={`p-4 rounded-lg border transition-all duration-200 ${
                     achievement.earned
                       ? 'bg-gradient-energy border-0 text-white shadow-glow'
-                      : 'bg-muted/20 border-border/50 text-muted-foreground'
+                      : 'bg-muted/20 border-border/50'
                   }`}
+                  style={!achievement.earned ? {color: '#034155'} : {}}
                 >
                   <div className="text-center space-y-2">
                     <div className="text-2xl">{achievement.icon}</div>
