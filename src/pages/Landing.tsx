@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dumbbell, Target, TrendingUp, Users, Star, CheckCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function Landing() {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -19,10 +21,10 @@ export default function Landing() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="text-lg px-8">
+            <Button size="lg" className="text-lg px-8" onClick={() => navigate('/register')}>
               Comenzar Gratis
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8">
+            <Button variant="outline" size="lg" className="text-lg px-8" onClick={() => navigate('/login')}>
               Iniciar Sesión
             </Button>
           </div>
@@ -168,7 +170,7 @@ export default function Landing() {
                     <span>Recetas limitadas</span>
                   </li>
                 </ul>
-                <Button className="w-full mt-6" variant="outline">
+                <Button className="w-full mt-6" variant="outline" onClick={() => navigate('/register')}>
                   Comenzar Gratis
                 </Button>
               </CardContent>
@@ -201,7 +203,7 @@ export default function Landing() {
                     <span>Análisis avanzado de progreso</span>
                   </li>
                 </ul>
-                <Button className="w-full mt-6">
+                <Button className="w-full mt-6" onClick={() => navigate('/register')}>
                   Obtener Premium
                 </Button>
               </CardContent>
@@ -220,10 +222,10 @@ export default function Landing() {
             Únete a miles de usuarios que ya están alcanzando sus objetivos con RiwiFit
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8">
+            <Button size="lg" variant="secondary" className="text-lg px-8" onClick={() => navigate('/register')}>
               Crear Cuenta Gratis
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button size="lg" variant="outline" className="text-lg px-8 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" onClick={() => navigate('/demo')}>
               Ver Demo
             </Button>
           </div>

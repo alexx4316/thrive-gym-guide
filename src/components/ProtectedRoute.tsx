@@ -34,9 +34,9 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
     );
   }
 
-  // Si no está autenticado, redirigir al login
+  // Si no está autenticado, redirigir al landing
   if (!isAuthenticated) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    return <Navigate to="/" state={{ from: location }} replace />;
   }
 
   // Si está autenticado, mostrar el componente
@@ -71,7 +71,7 @@ export function PublicRoute({ children }: ProtectedRouteProps) {
 
   // Si ya está autenticado, redirigir al dashboard
   if (isAuthenticated) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/app" replace />;
   }
 
   // Si no está autenticado, mostrar la página pública

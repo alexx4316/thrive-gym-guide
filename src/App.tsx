@@ -13,6 +13,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Welcome from "./pages/Welcome";
 import Demo from "./pages/Demo";
+import Landing from "./pages/Landing";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,9 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          {/* Página de landing - página principal */}
+          <Route path="/" element={<Landing />} />
+          
           {/* Página de demostración - accesible sin autenticación */}
           <Route path="/demo" element={<Demo />} />
           
@@ -47,7 +51,7 @@ const App = () => (
           } />
 
           {/* Rutas protegidas - requieren autenticación */}
-          <Route path="/" element={
+          <Route path="/app" element={
             <ProtectedRoute>
               <Layout />
             </ProtectedRoute>
